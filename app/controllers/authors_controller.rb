@@ -40,7 +40,7 @@ class AuthorsController < ApplicationController
   end
 
   def destroy
-    @author = Author.find(prams[:id])
+    @author = Author.find(params[:id])
     @author.delete
     render json: {message: "Author deleted"}
   end
