@@ -1,7 +1,7 @@
-10.times do
-  actor = Author.create(
-    first_name: Faker::Name.first_name,
-    last_name: Faker::Name.last_name,
-    bio: Faker::Lorem.paragraphs
+
+Author.all.each do |author|
+  Book.create(
+    title: Faker::Book.title,
+    author_id: author.id
   )
 end
